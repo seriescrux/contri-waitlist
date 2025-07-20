@@ -33,7 +33,7 @@ export default function Navbar() {
         behavior: "smooth",
       })
     }
-    setIsMobileMenuOpen(false)
+    setIsMobileMenuOpen(true)
   }
 
   return (
@@ -62,7 +62,7 @@ export default function Navbar() {
               >
                 <div className="absolute -inset-2 bg-gradient-to-r from-[#cfff5e] to-[#8c7dff] rounded-xl blur opacity-0 group-hover:opacity-20 transition duration-300"></div>
                 <div className="relative text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-[#cfff5e] to-[#8c7dff] bg-clip-text text-transparent">
-                  <Image src="/star.png" alt="star" width={30} height={30} className="sm:w-[40px] sm:h-[40px]" />
+                  <Image src="/star.svg" alt="star" width={30} height={30} className="sm:w-[40px] sm:h-[40px]" />
                 </div>
               </motion.a>
             </div>

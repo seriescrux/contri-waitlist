@@ -4,7 +4,7 @@ import disposableEmailDomains from "disposable-email-domains"
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
+    process.env.SUPABASE_SERVICE_ROLE_KEY! // Only used on the server
 )
 
 function isDisposable(email: string): boolean {
@@ -23,12 +23,35 @@ export async function POST(req: Request) {
             )
         }
 
-        const { error } = await supabase
-            .from("waitlist")
-            .insert([{ email }])
+        const lowerEmail = email.toLowerCase()
 
-        if (error) {
-            console.error("Insert error:", error)
+        const { data: existing, error: checkError } = await supabase
+            .from("waitlist")
+            .select("email")
+            .eq("email", lowerEmail)
+            .maybeSingle()
+
+        if (checkError) {
+            console.error("Check error:", checkError)
+            return NextResponse.json(
+                { error: "Failed to verify email existence." },
+                { status: 500 }
+            )
+        }
+
+        if (existing) {
+            return NextResponse.json(
+                { error: "You've already join, maybe refer us to a friend?" },
+                { status: 409 }
+            )
+        }
+
+        const { error: insertError } = await supabase
+            .from("waitlist")
+            .insert([{ email: lowerEmail }])
+
+        if (insertError) {
+            console.error("Insert error:", insertError)
             return NextResponse.json(
                 { error: "Failed to add email to waitlist." },
                 { status: 500 }

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Instagram, Linkedin } from "lucide-react"
+import {Instagram, Linkedin, Facebook, Twitter} from "lucide-react"
 
 export default function Footer() {
   return (
@@ -40,33 +40,11 @@ export default function Footer() {
             {/* Social Icons with Tooltips */}
             <motion.div
                 className="flex justify-center items-center gap-6 sm:gap-8 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.6 }}
+                initial={{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{delay: 0.6, duration: 0.6}}
             >
-              {/* Instagram */}
-              <div className="relative group">
-                <a
-                    href="https://www.instagram.com/contrimoney?igsh=MW43OXlwZmZxYnBpZQ=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#cfff5e] hover:text-white transition-colors duration-300"
-                    aria-label="Instagram"
-                >
-                  <Instagram className="w-6 h-6 sm:w-7 sm:h-7" />
-                </a>
-                <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-[#2d2c2a] text-xs text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
-                    initial={{ y: 10 }}
-                    animate={{ y: 0 }}
-                >
-                  Instagram
-                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]" />
-                </motion.div>
-              </div>
-
-              {/* LinkedIn */}
               <div className="relative group">
                 <a
                     href="https://www.linkedin.com/company/contrimoney/"
@@ -75,17 +53,77 @@ export default function Footer() {
                     className="text-[#cfff5e] hover:text-white transition-colors duration-300"
                     aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-6 h-6 sm:w-7 sm:h-7" />
+                  <Linkedin className="w-6 h-6 sm:w-7 sm:h-7"/>
                 </a>
                 <motion.div
                     className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-[#2d2c2a] text-xs text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
-                    initial={{ y: 10 }}
-                    animate={{ y: 0 }}
+                    initial={{y: 10}}
+                    animate={{y: 0}}
                 >
                   LinkedIn
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]"/>
+                </motion.div>
+              </div>
+              <div className="relative group">
+                <a
+                    href="https://www.instagram.com/contrimoney?igsh=MW43OXlwZmZxYnBpZQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#cfff5e] hover:text-white transition-colors duration-300"
+                    aria-label="Instagram"
+                >
+                  <Instagram className="w-6 h-6 sm:w-7 sm:h-7"/>
+                </a>
+                <motion.div
+                    className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-[#2d2c2a] text-xs text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+                    initial={{y: 10}}
+                    animate={{y: 0}}
+                >
+                  Instagram
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]"/>
+                </motion.div>
+              </div>
+              <div className="relative group">
+                <a
+                    href="https://x.com/contrimoney"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#cfff5e] hover:text-white transition-colors duration-300"
+                    aria-label="Twitter"
+                >
+                  <Twitter className="w-6 h-6 sm:w-7 sm:h-7"/>
+                </a>
+                <motion.div
+                    className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-[#2d2c2a] text-xs text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+                    initial={{y: 10}}
+                    animate={{y: 0}}
+                >
+                  Twitter
+                  <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]"/>
+                </motion.div>
+              </div>
+              {/*
+              <div className="relative group">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#cfff5e] hover:text-white transition-colors duration-300"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-6 h-6 sm:w-7 sm:h-7" />
+                </a>
+                <motion.div
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 px-3 py-1 bg-[#2d2c2a] text-xs text-white rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50"
+                  initial={{ y: 10 }}
+                  animate={{ y: 0 }}
+                >
+                  Facebook
                   <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]" />
                 </motion.div>
               </div>
+              */}
+
             </motion.div>
 
             {/* Bottom Text */}
