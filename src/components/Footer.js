@@ -102,10 +102,9 @@ export default function Footer() {
                   <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]"/>
                 </motion.div>
               </div>
-              
               <div className="relative group">
                 <a
-                  href=https:"//www.facebook.com/contrimoney"
+                  href="https://www.facebook.com/contrimoney"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#cfff5e] hover:text-white transition-colors duration-300"
@@ -122,8 +121,6 @@ export default function Footer() {
                   <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rotate-45 bg-[#2d2c2a]" />
                 </motion.div>
               </div>
-              
-
             </motion.div>
 
             {/* Bottom Text */}

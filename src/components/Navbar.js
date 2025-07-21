@@ -52,11 +52,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center justify-between gap-1 sm:gap-2">
               <motion.a
-                  href="#home"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection("#home")
-                  }}
+                  href="#"
                   className="relative group"
                   whileHover={{ scale: 1.05 }}
               >
